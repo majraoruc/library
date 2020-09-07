@@ -1,0 +1,21 @@
+{
+  "name": "final-exam-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd client && npm start",
+    "backend": "cd api && nodemon index.js",
+    "dev": "concurrently --kill-others \"npm run backend\" \"npm run frontend\"",
+    "install": "cd api && npm install && cd ../client && npm install",
+    "start": "cd client && npm run build && cd ../api && node index.js",
+    "generate": "cd api && node generate.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.2"
+  }
+}
